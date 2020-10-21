@@ -25,6 +25,15 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "System.ServiceModel.Syndication/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.Syndication.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Syndication.dll": {}
+        }
       }
     }
   },
@@ -172,11 +181,39 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "System.ServiceModel.Syndication/4.7.0": {
+      "sha512": "uqGE0hFhoE6w7SxBchhR+ebdf4krpnZe3FPdo7skxJZHOqwcGk+cDZ74Yfp3yFD2yl3emHBGAZb6SBsQWEaSkg==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.ServiceModel.Syndication.dll",
+        "lib/net461/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "ref/net461/System.ServiceModel.Syndication.dll",
+        "ref/net461/System.ServiceModel.Syndication.xml",
+        "ref/netcoreapp2.1/System.ServiceModel.Syndication.dll",
+        "ref/netcoreapp2.1/System.ServiceModel.Syndication.xml",
+        "ref/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "ref/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "runtimes/win/lib/net461/System.ServiceModel.Syndication.dll",
+        "runtimes/win/lib/net461/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.4.7.0.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "System.ServiceModel.Syndication >= 4.7.0"
     ]
   },
   "packageFolders": {
@@ -221,6 +258,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "System.ServiceModel.Syndication": {
+            "target": "Package",
+            "version": "[4.7.0, )"
           }
         },
         "imports": [

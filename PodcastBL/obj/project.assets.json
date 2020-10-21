@@ -38,6 +38,9 @@
       "RssDALInmemory/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ServiceModel.Syndication": "4.7.0"
+        },
         "compile": {
           "bin/placeholder/RssDALInmemory.dll": {}
         },
