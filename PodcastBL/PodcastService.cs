@@ -34,6 +34,10 @@ namespace PodcastBL
 
         }
         
+        public void Delete(Podcast podcast)
+        {
+            _podcastDataaccess.Delete(podcast);
+        }
         public Podcast Get(int id)
         {
            return _podcastDataaccess.List().Where(p => p.ID == id).FirstOrDefault();

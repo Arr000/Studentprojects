@@ -20,6 +20,7 @@ namespace PodcastApplication
         ListViewItem item1 = new ListViewItem();
         List<Podcast> podcasts = new List<Podcast>();
         PodcastService service = null;
+      
         
         public Form1()
         {
@@ -107,6 +108,16 @@ namespace PodcastApplication
 
 
           
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var selectedPodcast = listPodcast.SelectedItems[0].Text;
+            var podcast = service.Get(int.Parse(selectedPodcast));
+
+            service.Delete(podcast);
+
+            
         }
     } 
 }

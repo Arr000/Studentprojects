@@ -11,6 +11,7 @@ namespace PodcastDataAccess
         public void Delete(Podcast podcast)
         {
             podcasts.Remove(podcast);
+        
         }
 
         public IEnumerable<Podcast> List()
