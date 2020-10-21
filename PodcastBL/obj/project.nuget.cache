@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "h2y8G+KrAjHGAlrD8t+UwZGCuZSel8jjbSMoJL145V1TjeBu+BcrKv3L6S91hNfj/z5F4LFbOUoEaQYgeyaI6A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nene5\\source\\repos\\Studentprojects\\PodcastBL\\PodcastBL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nene5\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\nene5\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\nene5\\.nuget\\packages\\system.servicemodel.syndication\\4.7.0\\system.servicemodel.syndication.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

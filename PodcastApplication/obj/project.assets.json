@@ -1,0 +1,150 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "System.ServiceModel.Syndication/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/System.ServiceModel.Syndication.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Syndication.dll": {}
+        }
+      },
+      "PodcastBL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "RssDALInmemory": "1.0.0",
+          "System.ServiceModel.Syndication": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/PodcastBL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PodcastBL.dll": {}
+        }
+      },
+      "RssDALInmemory/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/RssDALInmemory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RssDALInmemory.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "System.ServiceModel.Syndication/4.7.0": {
+      "sha512": "uqGE0hFhoE6w7SxBchhR+ebdf4krpnZe3FPdo7skxJZHOqwcGk+cDZ74Yfp3yFD2yl3emHBGAZb6SBsQWEaSkg==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.ServiceModel.Syndication.dll",
+        "lib/net461/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "ref/net461/System.ServiceModel.Syndication.dll",
+        "ref/net461/System.ServiceModel.Syndication.xml",
+        "ref/netcoreapp2.1/System.ServiceModel.Syndication.dll",
+        "ref/netcoreapp2.1/System.ServiceModel.Syndication.xml",
+        "ref/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "ref/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "runtimes/win/lib/net461/System.ServiceModel.Syndication.dll",
+        "runtimes/win/lib/net461/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.4.7.0.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "PodcastBL/1.0.0": {
+      "type": "project",
+      "path": "../PodcastBL/PodcastBL.csproj",
+      "msbuildProject": "../PodcastBL/PodcastBL.csproj"
+    },
+    "RssDALInmemory/1.0.0": {
+      "type": "project",
+      "path": "../RssDAL/RssDALInmemory.csproj",
+      "msbuildProject": "../RssDAL/RssDALInmemory.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "PodcastBL >= 1.0.0",
+      "RssDALInmemory >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\nene5\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\nene5\\source\\repos\\Studentprojects\\PodcastApplication\\PodcastApplication.csproj",
+      "projectName": "PodcastApplication",
+      "projectPath": "C:\\Users\\nene5\\source\\repos\\Studentprojects\\PodcastApplication\\PodcastApplication.csproj",
+      "packagesPath": "C:\\Users\\nene5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nene5\\source\\repos\\Studentprojects\\PodcastApplication\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\nene5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\nene5\\source\\repos\\Studentprojects\\PodcastBL\\PodcastBL.csproj": {
+              "projectPath": "C:\\Users\\nene5\\source\\repos\\Studentprojects\\PodcastBL\\PodcastBL.csproj"
+            },
+            "C:\\Users\\nene5\\source\\repos\\Studentprojects\\RssDAL\\RssDALInmemory.csproj": {
+              "projectPath": "C:\\Users\\nene5\\source\\repos\\Studentprojects\\RssDAL\\RssDALInmemory.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
