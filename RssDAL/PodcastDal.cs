@@ -32,6 +32,11 @@ namespace PodcastDataAccess
                 savedPodcast.Description = podcast.Description;
                 savedPodcast.Address = podcast.Address;
                 savedPodcast.Items  = podcast.Items;
+                savedPodcast.Episodes = podcast.Episodes;
+                savedPodcast.Name = podcast.Name;
+                savedPodcast.RefreshInterval = podcast.RefreshInterval;
+                savedPodcast.Category = savedPodcast.Category;
+
                 
             }
 

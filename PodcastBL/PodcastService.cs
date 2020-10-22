@@ -2,6 +2,7 @@
 using PodcastModel;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.ServiceModel.Syndication;
 using System.Xml;
 
@@ -16,12 +17,25 @@ namespace PodcastBL
             _podcastDataaccess = podcastDataaccess;
         }
 
-        //public Podcast SavePodcastasFile(string url, string category, int frekvens)
+        //public Podcast SavePodcastasFile(string url, string name, string description, int frekvens, string category, )
         //{
-        //    XmlReader FD_readxml = XmlReader.Create(url);
-        //    SyndicationFeed FD_feed = SyndicationFeed.Load(FD_readxml);
-        //    var podcast = new Podcast();
+        //   XmlReader FD_readxml = XmlReader.Create(url);
+        //   SyndicationFeed FD_feed = SyndicationFeed.Load(FD_readxml);
+        //    var CompletePodcast = new Podcast();
+
+        //    CompletePodcast.Address = url;
+        //    CompletePodcast.Name = name;
+        //    CompletePodcast.Description = description;
+        //    CompletePodcast.RefreshInterval = frekvens;
+        //    CompletePodcast.
+
+
         //}
+
+        public void savePodcast(Podcast podcast)
+        {
+            _podcastDataaccess.Save(podcast);
+        }
 
         public Podcast Load(string url)
         {
@@ -55,5 +69,7 @@ namespace PodcastBL
         {
             return _podcastDataaccess.List();
         }
+
+       
     }
 }

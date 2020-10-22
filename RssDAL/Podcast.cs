@@ -13,7 +13,6 @@ namespace PodcastModel
         public string Description { get; set; }
         public int RefreshInterval { get; set; }
         public int Episodes { get; set; }
-
         public IEnumerable<SyndicationItem> Items{ get; set; }
         public string Category { get; set; }
 

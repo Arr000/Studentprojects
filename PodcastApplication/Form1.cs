@@ -26,11 +26,13 @@ namespace PodcastApplication
         {
             IPodcastDal dataacess = new PodcastDataAccess.PodcastDal();
             service = new PodcastService(dataacess);
+            
             InitializeComponent();
             listPodcast.FullRowSelect = true;
             fillMyCategoryList();
             fillMyCombobox();    
         }
+    
 
         private void fillMyCombobox()
         {
@@ -49,10 +51,10 @@ namespace PodcastApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+        try
             {
-                // var s = "";
-               var podcast = service.Load("https://www.svt.se/rss.xml");
+                // var s = ""https://www.svt.se/rss.xml";
+                var podcast = service.Load("https://feed.pod.space/filipandfredrik");
               
 
                 string[] podcastInfo = {podcast.ID.ToString(),podcast.Name, podcast.Episodes.ToString(), "" , ""};
@@ -104,10 +106,7 @@ namespace PodcastApplication
             {
                 listEpisodes.Items.Add(p.Title.Text);
             }
-           
 
-
-          
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -118,6 +117,56 @@ namespace PodcastApplication
             service.Delete(podcast);
 
             
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var selectedPodcast = listPodcast.SelectedItems[0].Text;
+            var podcast = service.Get(int.Parse(selectedPodcast));
+
+            podcast.Category = "kalleanka";
+            podcast.RefreshInterval = int.Parse("400");
+
+            service.savePodcast(podcast);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listEpisodes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // hämta en podcast via index från listview
+            // hämta itemindex från listcategori
+            // LINQ där jag frågar hämta item.index där index lika med selecteditem(från listbox)
+
+
+           var p =  listPodcast.SelectedItems[0].Text;
+           var podcast = service.Get(int.Parse(p)); 
+
+           
+            
+           var itemTitle = listEpisodes.SelectedItem.ToString();
+
+            var chosenEpisode = podcast.Items.Where(i => i.Title.Text == itemTitle).FirstOrDefault();
+
+           var c = chosenEpisode.Summary.Text;
+           listDescription.Items.Add(c);
+
+
+
+
+        }
+
+        private void listDescription_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+
+
+
+
+
         }
     } 
 }
