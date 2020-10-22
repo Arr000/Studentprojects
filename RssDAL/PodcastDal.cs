@@ -32,6 +32,7 @@ namespace PodcastDataAccess
                 savedPodcast.Description = podcast.Description;
                 savedPodcast.Address = podcast.Address;
                 savedPodcast.Items  = podcast.Items;
+                
             }
 
         }

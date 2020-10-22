@@ -16,6 +16,13 @@ namespace PodcastBL
             _podcastDataaccess = podcastDataaccess;
         }
 
+        //public Podcast SavePodcastasFile(string url, string category, int frekvens)
+        //{
+        //    XmlReader FD_readxml = XmlReader.Create(url);
+        //    SyndicationFeed FD_feed = SyndicationFeed.Load(FD_readxml);
+        //    var podcast = new Podcast();
+        //}
+
         public Podcast Load(string url)
         {
             XmlReader FD_readxml = XmlReader.Create(url);
