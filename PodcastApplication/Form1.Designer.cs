@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnSearchPodcast = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPodcastUrl = new System.Windows.Forms.TextBox();
             this.listPodcast = new System.Windows.Forms.ListView();
             this.ID = new System.Windows.Forms.ColumnHeader();
             this.Titel = new System.Windows.Forms.ColumnHeader();
@@ -52,7 +52,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.listDescription = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSearchPodcast
@@ -65,12 +64,12 @@
             this.btnSearchPodcast.UseVisualStyleBackColor = true;
             this.btnSearchPodcast.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtPodcastUrl
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 23);
-            this.textBox1.TabIndex = 1;
+            this.txtPodcastUrl.Location = new System.Drawing.Point(31, 62);
+            this.txtPodcastUrl.Name = "txtPodcastUrl";
+            this.txtPodcastUrl.Size = new System.Drawing.Size(211, 23);
+            this.txtPodcastUrl.TabIndex = 1;
             // 
             // listPodcast
             // 
@@ -247,27 +246,17 @@
             // 
             this.listDescription.FormattingEnabled = true;
             this.listDescription.ItemHeight = 15;
-            this.listDescription.Location = new System.Drawing.Point(102, 388);
+            this.listDescription.Location = new System.Drawing.Point(2, 388);
             this.listDescription.Name = "listDescription";
-            this.listDescription.Size = new System.Drawing.Size(694, 94);
+            this.listDescription.Size = new System.Drawing.Size(952, 94);
             this.listDescription.TabIndex = 16;
             this.listDescription.SelectedIndexChanged += new System.EventHandler(this.listDescription_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(635, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Handling";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 494);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(959, 494);
             this.Controls.Add(this.listDescription);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDelete);
@@ -285,7 +274,7 @@
             this.Controls.Add(this.Kategori);
             this.Controls.Add(this.listCategory);
             this.Controls.Add(this.listPodcast);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPodcastUrl);
             this.Controls.Add(this.btnSearchPodcast);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -298,7 +287,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSearchPodcast;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPodcastUrl;
         private System.Windows.Forms.ListView listPodcast;
         private System.Windows.Forms.ColumnHeader Titel;
         private System.Windows.Forms.ColumnHeader Episode;
@@ -321,7 +310,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listDescription;
-        private System.Windows.Forms.Label label1;
     }
 }
 

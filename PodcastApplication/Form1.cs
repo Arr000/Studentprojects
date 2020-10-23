@@ -54,7 +54,8 @@ namespace PodcastApplication
         try
             {
                 // var s = ""https://www.svt.se/rss.xml";
-                var podcast = service.Load("https://feed.pod.space/filipandfredrik");
+                //https://feed.pod.space/filipandfredrik
+                var podcast = service.Load(txtPodcastUrl.Text);
               
 
                 string[] podcastInfo = {podcast.ID.ToString(),podcast.Name, podcast.Episodes.ToString(), "" , ""};
@@ -81,8 +82,9 @@ namespace PodcastApplication
         {
             if(txtChooseCategory.Text != "" && txtTitel.Text != "" && listPodcast.SelectedItems.Count >= 1)
             {
-                 listPodcast.SelectedItems[0].SubItems[3].Text = txtChooseCategory.Text;
-                 listPodcast.SelectedItems[0].SubItems[1].Text = txtTitel.Text;
+                 listPodcast.SelectedItems[0].SubItems[4].Text = txtChooseCategory.Text;
+                listPodcast.SelectedItems[0].SubItems[3].Text = cbxFrekvens.Text;
+                listPodcast.SelectedItems[0].SubItems[1].Text = txtTitel.Text;
             }
             else
             {
