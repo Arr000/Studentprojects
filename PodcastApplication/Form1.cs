@@ -17,22 +17,29 @@ namespace PodcastApplication
     {
 
         public string categoryText;
-        ListViewItem item1 = new ListViewItem();
-        List<Podcast> podcasts = new List<Podcast>();
         PodcastService service = null;
       
         
         public Form1()
         {
+            InitializeComponent();
+
             IPodcastDal dataacess = new PodcastDataAccess.PodcastDal();
             service = new PodcastService(dataacess);
-            
-            InitializeComponent();
+            service.Initialize();
+            var savedPodcasts = service.GetAllPodcast();
+            foreach (var p in savedPodcasts)
+            {
+                string[] podcastInfo = { p.ID.ToString(), p.Name, p.Episodes.ToString(), p.RefreshInterval.ToString(), p.Category };
+                ListViewItem PodcastListDisplay = new ListViewItem(podcastInfo);
+                listPodcast.Items.Add(PodcastListDisplay);
+            }
+
             listPodcast.FullRowSelect = true;
             fillMyCategoryList();
-            fillMyCombobox();    
+            fillMyCombobox();
         }
-    
+
 
         private void fillMyCombobox()
         {
@@ -53,8 +60,8 @@ namespace PodcastApplication
         {
         try
             {
-                // var s = ""https://www.svt.se/rss.xml";
-                //https://feed.pod.space/filipandfredrik
+                // var s = "https://www.svt.se/rss.xml";
+                
                 var podcast = service.Load(txtPodcastUrl.Text);
               
 
@@ -114,22 +121,36 @@ namespace PodcastApplication
         private void btnDelete_Click(object sender, EventArgs e)
         {
             var selectedPodcast = listPodcast.SelectedItems[0].Text;
+
             var podcast = service.Get(int.Parse(selectedPodcast));
 
             service.Delete(podcast);
 
-            
+            foreach (ListViewItem eachItem in listPodcast.SelectedItems)
+            {
+                listPodcast.Items.Remove(eachItem);
+            }
+
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             var selectedPodcast = listPodcast.SelectedItems[0].Text;
-            var podcast = service.Get(int.Parse(selectedPodcast));
+            if(selectedPodcast.Length >= 1)
+            {
+                var podcast = service.Get(int.Parse(selectedPodcast));
 
-            podcast.Category = "kalleanka";
-            podcast.RefreshInterval = int.Parse("400");
+                podcast.Category = txtChooseCategory.Text;
+                podcast.RefreshInterval = int.Parse(cbxFrekvens.Text);
+                podcast.Name = txtTitel.Text;
 
-            service.savePodcast(podcast);
+                //service.refreshIntervall()
+
+                service.Save(podcast);
+                service.Serialize();
+            }
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)

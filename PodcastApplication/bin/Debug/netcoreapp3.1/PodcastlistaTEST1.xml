@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Podcast>
+    <ID>1</ID>
+    <Name>SVT Nyheter</Name>
+    <Address>https://www.svt.se/rss.xml</Address>
+    <Description>De senaste artiklarna på SVT Nyheter</Description>
+    <RefreshInterval>400</RefreshInterval>
+    <Episodes>20</Episodes>
+    <Category>kalleanka</Category>
+  </Podcast>
+  <Podcast>
+    <ID>2</ID>
+    <Name>SVT Nyheter</Name>
+    <Address>https://www.svt.se/rss.xml</Address>
+    <Description>De senaste artiklarna på SVT Nyheter</Description>
+    <RefreshInterval>400</RefreshInterval>
+    <Episodes>20</Episodes>
+    <Category>kalleanka</Category>
+  </Podcast>
+</ArrayOfPodcast>

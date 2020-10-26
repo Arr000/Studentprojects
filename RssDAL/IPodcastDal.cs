@@ -8,5 +8,7 @@ namespace PodcastModel
         void Save(Podcast podcast);
         IEnumerable<Podcast> List();
         void Delete(Podcast podcast);
+        void Serialize();
+        List<Podcast> DeSerialize();
     }
 }

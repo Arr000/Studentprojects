@@ -1,5 +1,7 @@
 ﻿
+using PodcastDataAccess;
 using PodcastModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
@@ -17,25 +19,25 @@ namespace PodcastBL
             _podcastDataaccess = podcastDataaccess;
         }
 
-        //public Podcast SavePodcastasFile(string url, string name, string description, int frekvens, string category, )
-        //{
-        //   XmlReader FD_readxml = XmlReader.Create(url);
-        //   SyndicationFeed FD_feed = SyndicationFeed.Load(FD_readxml);
-        //    var CompletePodcast = new Podcast();
-
-        //    CompletePodcast.Address = url;
-        //    CompletePodcast.Name = name;
-        //    CompletePodcast.Description = description;
-        //    CompletePodcast.RefreshInterval = frekvens;
-        //    CompletePodcast.
-
-
-        //}
-
-        public void savePodcast(Podcast podcast)
+        public List<Podcast> DeSerialize()
         {
-            _podcastDataaccess.Save(podcast);
+            return _podcastDataaccess.DeSerialize();
         }
+
+        public void Initialize()
+        {
+            var savedPodcasts = DeSerialize();
+            foreach (var p in savedPodcasts)
+            {
+                _podcastDataaccess.Save(p);
+            }
+        }
+
+        public void Serialize()
+        {
+            _podcastDataaccess.Serialize();           
+        }
+
 
         public Podcast Load(string url)
         {
@@ -47,6 +49,7 @@ namespace PodcastBL
             podcast.Name = FD_feed.Title.Text;
             podcast.Episodes = FD_feed.Items.Count();
             podcast.Items= FD_feed.Items;
+            
             podcast.Description = FD_feed.Description.Text;
 
             _podcastDataaccess.Save(podcast);
@@ -54,6 +57,8 @@ namespace PodcastBL
             return podcast;
 
         }
+
+
         
         public void Delete(Podcast podcast)
         {
@@ -64,12 +69,16 @@ namespace PodcastBL
            return _podcastDataaccess.List().Where(p => p.ID == id).FirstOrDefault();
         }
 
+        //public podcast refreshintervall
 
         public IEnumerable<Podcast> GetAllPodcast()
         {
             return _podcastDataaccess.List();
         }
 
-       
+        public void Save(Podcast podcast)
+        {
+            _podcastDataaccess.Save(podcast);
+        }
     }
 }

@@ -37,7 +37,6 @@
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.listCategory = new System.Windows.Forms.ListBox();
-            this.Kategori = new System.Windows.Forms.Label();
             this.btnAddCategory = new System.Windows.Forms.Button();
             this.txtInsertCategory = new System.Windows.Forms.TextBox();
             this.listEpisodes = new System.Windows.Forms.ListBox();
@@ -56,7 +55,7 @@
             // 
             // btnSearchPodcast
             // 
-            this.btnSearchPodcast.Location = new System.Drawing.Point(65, 33);
+            this.btnSearchPodcast.Location = new System.Drawing.Point(31, 33);
             this.btnSearchPodcast.Name = "btnSearchPodcast";
             this.btnSearchPodcast.Size = new System.Drawing.Size(147, 23);
             this.btnSearchPodcast.TabIndex = 0;
@@ -68,7 +67,7 @@
             // 
             this.txtPodcastUrl.Location = new System.Drawing.Point(31, 62);
             this.txtPodcastUrl.Name = "txtPodcastUrl";
-            this.txtPodcastUrl.Size = new System.Drawing.Size(211, 23);
+            this.txtPodcastUrl.Size = new System.Drawing.Size(245, 23);
             this.txtPodcastUrl.TabIndex = 1;
             // 
             // listPodcast
@@ -111,24 +110,15 @@
             // 
             this.listCategory.FormattingEnabled = true;
             this.listCategory.ItemHeight = 15;
-            this.listCategory.Location = new System.Drawing.Point(282, 31);
+            this.listCategory.Location = new System.Drawing.Point(447, 12);
             this.listCategory.Name = "listCategory";
             this.listCategory.Size = new System.Drawing.Size(170, 94);
             this.listCategory.TabIndex = 3;
             this.listCategory.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listCategory_MouseDown);
             // 
-            // Kategori
-            // 
-            this.Kategori.AutoSize = true;
-            this.Kategori.Location = new System.Drawing.Point(282, 13);
-            this.Kategori.Name = "Kategori";
-            this.Kategori.Size = new System.Drawing.Size(51, 15);
-            this.Kategori.TabIndex = 5;
-            this.Kategori.Text = "Kategori";
-            // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(282, 160);
+            this.btnAddCategory.Location = new System.Drawing.Point(447, 141);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(75, 23);
             this.btnAddCategory.TabIndex = 6;
@@ -138,7 +128,7 @@
             // 
             // txtInsertCategory
             // 
-            this.txtInsertCategory.Location = new System.Drawing.Point(282, 131);
+            this.txtInsertCategory.Location = new System.Drawing.Point(447, 112);
             this.txtInsertCategory.Name = "txtInsertCategory";
             this.txtInsertCategory.Size = new System.Drawing.Size(170, 23);
             this.txtInsertCategory.TabIndex = 7;
@@ -155,7 +145,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(193, 343);
+            this.button2.Location = new System.Drawing.Point(112, 343);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(83, 23);
             this.button2.TabIndex = 10;
@@ -214,7 +204,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(303, 219);
+            this.button3.Location = new System.Drawing.Point(447, 179);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 23);
             this.button3.TabIndex = 13;
@@ -224,7 +214,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(112, 343);
+            this.btnDelete.Location = new System.Drawing.Point(31, 343);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
@@ -234,7 +224,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(313, 295);
+            this.button1.Location = new System.Drawing.Point(201, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -271,7 +261,6 @@
             this.Controls.Add(this.listEpisodes);
             this.Controls.Add(this.txtInsertCategory);
             this.Controls.Add(this.btnAddCategory);
-            this.Controls.Add(this.Kategori);
             this.Controls.Add(this.listCategory);
             this.Controls.Add(this.listPodcast);
             this.Controls.Add(this.txtPodcastUrl);
@@ -294,7 +283,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ListBox listCategory;
-        private System.Windows.Forms.Label Kategori;
         private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.TextBox txtInsertCategory;
         private System.Windows.Forms.ListBox listEpisodes;

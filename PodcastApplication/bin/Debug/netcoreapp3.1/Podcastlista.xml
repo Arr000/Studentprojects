@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Podcast>
+    <ID>1</ID>
+    <Name>Apple Events</Name>
+    <Address>https://rss.art19.com/apple-events</Address>
+    <Description>
+      &lt;p&gt;The Apple Events podcast is home to the latest keynote addresses. Listen to announcements of new products and services and browse the archive of past events to relive revolutionary moments in the history of personal technology.&lt;/p&gt;
+    </Description>
+    <RefreshInterval>0</RefreshInterval>
+    <Episodes>4</Episodes>
+  </Podcast>
+  <Podcast>
+    <ID>2</ID>
+    <Name>Apple Events</Name>
+    <Address>https://rss.art19.com/apple-events</Address>
+    <Description>
+      &lt;p&gt;The Apple Events podcast is home to the latest keynote addresses. Listen to announcements of new products and services and browse the archive of past events to relive revolutionary moments in the history of personal technology.&lt;/p&gt;
+    </Description>
+    <RefreshInterval>400</RefreshInterval>
+    <Episodes>4</Episodes>
+    <Category>kalleanka</Category>
+  </Podcast>
+  <Podcast>
+    <ID>3</ID>
+    <Name>Apple Events</Name>
+    <Address>https://rss.art19.com/apple-events</Address>
+    <Description>
+      &lt;p&gt;The Apple Events podcast is home to the latest keynote addresses. Listen to announcements of new products and services and browse the archive of past events to relive revolutionary moments in the history of personal technology.&lt;/p&gt;
+    </Description>
+    <RefreshInterval>0</RefreshInterval>
+    <Episodes>4</Episodes>
+  </Podcast>
+  <Podcast>
+    <ID>4</ID>
+    <Name>Apple Events</Name>
+    <Address>https://rss.art19.com/apple-events</Address>
+    <Description>
+      &lt;p&gt;The Apple Events podcast is home to the latest keynote addresses. Listen to announcements of new products and services and browse the archive of past events to relive revolutionary moments in the history of personal technology.&lt;/p&gt;
+    </Description>
+    <RefreshInterval>0</RefreshInterval>
+    <Episodes>4</Episodes>
+  </Podcast>
+  <Podcast>
+    <ID>5</ID>
+    <Name>Apple Events</Name>
+    <Address>https://rss.art19.com/apple-events</Address>
+    <Description>
+      &lt;p&gt;The Apple Events podcast is home to the latest keynote addresses. Listen to announcements of new products and services and browse the archive of past events to relive revolutionary moments in the history of personal technology.&lt;/p&gt;
+    </Description>
+    <RefreshInterval>0</RefreshInterval>
+    <Episodes>4</Episodes>
+  </Podcast>
+</ArrayOfPodcast>
