@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RssDALInmemory;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel.Syndication;
@@ -17,33 +18,8 @@ namespace PodcastModel
         public string Description { get; set; }
         public int RefreshInterval { get; set; }
         public int Episodes { get; set; }
-        [System.Xml.Serialization.XmlIgnore]
-        public IEnumerable<SyndicationItem> Items{ get; set; }
+        [XmlArray("Items")]
+        public ItemDescription[] Items{ get; set; }
         public string Category { get; set; }
-
-        public double UpdateInterval { get; set; }
-        public DateTime nextUpdate { get; set; }
-
-        public Podcast() { }
-
-        public Podcast(double intervall)
-        {
-            UpdateInterval = intervall;
-        }
-
-        public bool NeedsUpdate
-        {
-            get
-            {
-                return nextUpdate <= DateTime.Now;
-            }
-        }
-
-        public DateTime Update()
-        {
-            nextUpdate = DateTime.Now.AddMinutes(UpdateInterval);
-            return nextUpdate;
-        }
-
     }
 }

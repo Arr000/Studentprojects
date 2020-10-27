@@ -6,7 +6,7 @@ namespace PodcastDataAccess
 {
     public interface IPodCastSerializable
     {
-        void Serialize(List<Podcast> list);
+        void Serialize();
         List<Podcast> DeSerialize();
     }
 }

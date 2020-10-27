@@ -16,7 +16,6 @@ namespace PodcastApplication
     public partial class Form1 : Form
     {
 
-        public string categoryText;
         PodcastService service = null;
       
         
@@ -64,14 +63,12 @@ namespace PodcastApplication
                 
                 var podcast = service.Load(txtPodcastUrl.Text);
               
-
                 string[] podcastInfo = {podcast.ID.ToString(),podcast.Name, podcast.Episodes.ToString(), "" , ""};
 
                 ListViewItem PodcastListDisplay = new ListViewItem(podcastInfo);
 
                 listPodcast.Items.Add(PodcastListDisplay);
 
-             
             }
             catch
             {
@@ -81,31 +78,26 @@ namespace PodcastApplication
 
        private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            categoryText = txtInsertCategory.Text;
-            listCategory.Items.Add(categoryText);
+            listCategory.Items.Add(txtInsertCategory.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(txtChooseCategory.Text != "" && txtTitel.Text != "" && listPodcast.SelectedItems.Count >= 1)
-            {
-                 listPodcast.SelectedItems[0].SubItems[4].Text = txtChooseCategory.Text;
+                listPodcast.SelectedItems[0].SubItems[4].Text = txtChooseCategory.Text;
                 listPodcast.SelectedItems[0].SubItems[3].Text = cbxFrekvens.Text;
                 listPodcast.SelectedItems[0].SubItems[1].Text = txtTitel.Text;
-            }
-            else
-            {
-                MessageBox.Show("Fyll i värden och välj från podcast vilken lista du vill ändra");
-            }
         }
 
         private void listCategory_MouseDown(object sender, MouseEventArgs e)
         {
-            txtChooseCategory.Text = listCategory.SelectedItems[0].ToString();
-        } 
+            
+           
+
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            listEpisodes.Items.Clear();
             var PodcastID  = listPodcast.SelectedItems[0].SubItems[0].Text;
             var podcast = service.Get(int.Parse(PodcastID));
 
@@ -113,7 +105,7 @@ namespace PodcastApplication
 
             foreach(var p in podcast.Items)
             {
-                listEpisodes.Items.Add(p.Title.Text);
+                listEpisodes.Items.Add(p.Name);
             }
 
         }
@@ -131,7 +123,6 @@ namespace PodcastApplication
                 listPodcast.Items.Remove(eachItem);
             }
 
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -140,12 +131,9 @@ namespace PodcastApplication
             if(selectedPodcast.Length >= 1)
             {
                 var podcast = service.Get(int.Parse(selectedPodcast));
-
                 podcast.Category = txtChooseCategory.Text;
                 podcast.RefreshInterval = int.Parse(cbxFrekvens.Text);
                 podcast.Name = txtTitel.Text;
-
-                //service.refreshIntervall()
 
                 service.Save(podcast);
                 service.Serialize();
@@ -160,35 +148,22 @@ namespace PodcastApplication
 
         private void listEpisodes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // hämta en podcast via index från listview
-            // hämta itemindex från listcategori
-            // LINQ där jag frågar hämta item.index där index lika med selecteditem(från listbox)
-
-
+           
            var p =  listPodcast.SelectedItems[0].Text;
            var podcast = service.Get(int.Parse(p)); 
 
-           
             
            var itemTitle = listEpisodes.SelectedItem.ToString();
 
-            var chosenEpisode = podcast.Items.Where(i => i.Title.Text == itemTitle).FirstOrDefault();
+           var chosenEpisode = podcast.Items.Where(i => i.Name == itemTitle).FirstOrDefault();
 
-           var c = chosenEpisode.Summary.Text;
+           var c = chosenEpisode.Summary;
            listDescription.Items.Add(c);
-
-
-
 
         }
 
-        private void listDescription_SelectedIndexChanged(object sender, EventArgs e)
+        private void listPodcast_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-
-
-
-
 
         }
     } 

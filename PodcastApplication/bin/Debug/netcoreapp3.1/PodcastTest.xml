@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Podcast>
-    <Name>SVT</Name>
+    <Name>S</Name>
     <Address>https://www.svt.se/rss.xml</Address>
     <Description>De senaste artiklarna på SVT Nyheter</Description>
-    <RefreshInterval>1000</RefreshInterval>
+    <RefreshInterval>500</RefreshInterval>
     <Episodes>20</Episodes>
-    <Category>Thriller</Category>
+    <Category>Drama</Category>
     <UpdateInterval>0</UpdateInterval>
     <nextUpdate>0001-01-01T00:00:00</nextUpdate>
   </Podcast>

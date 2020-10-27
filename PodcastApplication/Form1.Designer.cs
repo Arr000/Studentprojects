@@ -85,6 +85,7 @@
             this.listPodcast.TabIndex = 2;
             this.listPodcast.UseCompatibleStateImageBehavior = false;
             this.listPodcast.View = System.Windows.Forms.View.Details;
+            this.listPodcast.SelectedIndexChanged += new System.EventHandler(this.listPodcast_SelectedIndexChanged);
             // 
             // ID
             // 
@@ -141,6 +142,7 @@
             this.listEpisodes.Name = "listEpisodes";
             this.listEpisodes.Size = new System.Drawing.Size(371, 169);
             this.listEpisodes.TabIndex = 9;
+            this.listEpisodes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listCategory_MouseDown);
             this.listEpisodes.SelectedIndexChanged += new System.EventHandler(this.listEpisodes_SelectedIndexChanged);
             // 
             // button2
@@ -240,7 +242,6 @@
             this.listDescription.Name = "listDescription";
             this.listDescription.Size = new System.Drawing.Size(952, 94);
             this.listDescription.TabIndex = 16;
-            this.listDescription.SelectedIndexChanged += new System.EventHandler(this.listDescription_SelectedIndexChanged);
             // 
             // Form1
             // 

@@ -1,6 +1,7 @@
 ﻿
 using PodcastDataAccess;
 using PodcastModel;
+using RssDALInmemory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,22 +45,25 @@ namespace PodcastBL
             XmlReader FD_readxml = XmlReader.Create(url);
             SyndicationFeed FD_feed = SyndicationFeed.Load(FD_readxml);
             var podcast = new Podcast();
+            var itemdescriptions = new List<ItemDescription>();
 
             podcast.Address = url;
             podcast.Name = FD_feed.Title.Text;
             podcast.Episodes = FD_feed.Items.Count();
-            podcast.Items= FD_feed.Items;
+            foreach(var item in FD_feed.Items)
+            {
+                itemdescriptions.Add(new ItemDescription() { Name = item.Title?.Text ?? "no Titel", Summary = item.Summary?.Text ?? "No summary" });
+            }
+
+            podcast.Items = itemdescriptions.ToArray();
             
             podcast.Description = FD_feed.Description.Text;
 
             _podcastDataaccess.Save(podcast);
             
             return podcast;
-
         }
 
-
-        
         public void Delete(Podcast podcast)
         {
             _podcastDataaccess.Delete(podcast);
@@ -68,8 +72,6 @@ namespace PodcastBL
         {
            return _podcastDataaccess.List().Where(p => p.ID == id).FirstOrDefault();
         }
-
-        //public podcast refreshintervall
 
         public IEnumerable<Podcast> GetAllPodcast()
         {

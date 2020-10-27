@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<ArrayOfPodcast xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Podcast>
+    <Name>SVT</Name>
+    <Address>https://www.svt.se/rss.xml</Address>
+    <Description>De senaste artiklarna på SVT Nyheter</Description>
+    <RefreshInterval>500</RefreshInterval>
+    <Episodes>20</Episodes>
+    <Items>
+      <ItemDescription>
+        <Name>Antalet bekräftade fall av covid-19 har fördubblats</Name>
+        <Summary>Ökningen av antalet personer som smittats av corona fortsätter öka i Västra Götalandsregionen. Förra veckan konstaterades nästan dubbelt så många fall jämfört med veckan innan dess. </Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Paikallisradion ensimmäiset suomalaistoimittajat dokumentoivat nyt mennyttä aikaa</Name>
+        <Summary>Paikallisradio LRAB:n ensimmäiset suomalaistoimittajat ovat alkaneet kerätä materiaalia radion toiminnan alkuvaiheista 1970-luvulla. Tavoitteena on dokumentoida muistoja ja kokemuksia ajalta, jolloin paikallisradiolähetykset aloitettiin maahan saapuneita suomalaissiirtolaisia varten.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Fågelskådare vallfärdar till Venjan för den sällsynta mongolfinken</Name>
+        <Summary>Fågelskådare från hela landet har samlats i Venjan i Mora kommun för att se på en mongolfink. En fågel som normalt lever i bergstrakter i sydvästra och centrala Asien, och som tidigare inte observerats i Sverige.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Magnus pumpor sålde slut rekordfort – trots att Liseberg ställde in</Name>
+        <Summary>Magnus Magnusson, pumpaodlare i Mellby, trodde att han skulle ha ett överskott på 30 ton pumpor i år efter att Liseberg meddelat att de skulle ställa in sitt årliga Halloweenfirande. Men försäljningen tog en helt annan vändning. 
+– Nu är det faktiskt helt slut på pumpor. De brukar ta slut – men inte veckan innan Halloween, säger Magnus Magnusson som nu har sålt slut alla sina pumpor.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Drygt 5 000 nya bekräftade covidfall sedan i fredags</Name>
+        <Summary>Svenska dödssiffran räknas ner med 15 fall, meddelade statsepidemiolog Anders Tegnell på </Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Borås styre gör miljonsatsning på krisberedskap</Name>
+        <Summary>Budgeten för 2021 i Borås stad är präglad av coronapandemin. Efter att ha kämpat under en vår utan tillräckligt stort lager av skyddsutrustning väljer nu den styrande majoriteten att satsa på krisberedskap. De avsätter sex miljoner kronor i sin budget. </Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Insatsstyrkan kallades in vid skjutning i Grums</Name>
+        <Summary>Insatsstyrkan kallades till Grums i natt då en man blev skjuten. 
+I klippet berättar tf lokalpolisområdeschef Ulrika Sundström vad som hände. </Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Taxinge slott ställer in julmarknad</Name>
+        <Summary>Årets julmarknad på Taxinge slott ställs in på grund av coronapandemin.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Polens premiärminister om abortdemonstrationerna: ”Barbari”</Name>
+        <Summary>Mateusz Morawiecki, Polens premiärminister, har beslutat att sätta in militärpolis mot demonstranterna i landet, som är emot en skärpning av dess abortlagar.
+– Våldshandlingar, barbari och vandalisering är fullkomligt oacceptabelt, sa premiärministern på tisdagen.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Trio döms för flera barnvåldtäkter – kvinna agerade hallick</Name>
+        <Summary>Tre personer, två män och en kvinna, döms i dag för upprepade våldtäkter som ska ha skett mot ett barn i nedre tonåren i Blekinge under våren. Kvinnan ska ha agerat hallick och fått det minderåriga offret att sälja sex till de två männen. De två männen döms till fängelse och kvinnan får ungdomsvård.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Två miljoner hushåll kan mista TV4</Name>
+        <Summary />
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Drygt 5 000 fall sedan i fredags </Name>
+        <Summary />
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Region Skåne skärper coronaråden </Name>
+        <Summary />
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Ingen resning i Rönnäsfallet – HD säger nej</Name>
+        <Summary>Det blir ingen resning i Högsta domstolen för den 47-åring som sitter dömd för dödsmisshandeln och våldtäkten i Rönnäs utanför Vilhelmina i november 2014.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Högt tryck på 1177 – många vill boka vaccination</Name>
+        <Summary>Sedan Region Sörmland öppnade upp sitt bokningssystem för vaccinering mot säsongsinfluensan och pneumokocker har 20 000 sörmlänningar bokat in sig.
+– Vi var beredda på det är många som vill vaccinera sig men vi blev kanske lite tagna på sängen över att intresset var så stort redan första veckan, säger Mats Henningsson, hälsovalschef i Region Sörmland.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Region Gotland i möte med energiministern om tredje elkabel</Name>
+        <Summary>Ledningen för Region Gotland hade idag ett digitalt möte med energiminister Anders Ygeman (S). På agendan stod den omdebatterade tredje elkabeln. </Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Ambulansflyg fick inte landa i Växjö – på grund av personalbrist</Name>
+        <Summary>Sjukvården i Region Kronoberg har nekats landning med ambulansflyg två gånger, de senaste veckorna. Anledningen är att det saknas personal som har beredskap för att ta hand om ambulansflygen, skriver Smålandsposten. </Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Regionen redo för egenprovtagning för covid-19</Name>
+        <Summary>Från och med den 3 november kommer norrbottningarna ha möjlighet att själva testa sig för om de är smittade av coronaviruset. Det meddelade Region Norrbotten på en presskonferens under tisdagen.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Två män åtalas för mordförsök i Jönköping</Name>
+        <Summary>Nu åtalas de båda män som i somras ska ha försökt döda två personer i centrala Jönköping.</Summary>
+      </ItemDescription>
+      <ItemDescription>
+        <Name>Två miljoner hushåll kan mista TV4</Name>
+        <Summary />
+      </ItemDescription>
+    </Items>
+    <Category>DRAMA</Category>
+  </Podcast>
+</ArrayOfPodcast>
